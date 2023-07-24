@@ -1,3 +1,7 @@
+import { getNextDays } from "./getNextDays";
+
 test("should be return the next fixe days", () => {
-  // Executar o nosso teste...
-})
+  const days = getNextDays();
+
+  expect(days.length).toBe(5);
+});

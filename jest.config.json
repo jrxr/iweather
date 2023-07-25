@@ -1,5 +1,6 @@
 {
   "present": "jest-expo",
+  "moduleFileExtensions": ["js", "mjs", "cjs", "jsx", "ts", "tsx", "json", "node"],
   "globals": {
     "__DEV__": true
   },

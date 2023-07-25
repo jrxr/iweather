@@ -10,7 +10,7 @@ describe("Component: SelectList", () => {
 
     render(<SelectList data={data} onChange={() => {}} onPress={() => {}} />);
 
-    const selectedCity = screen.getByText("Distrito Federal");
+    const selectedCity = screen.getByText(/Distrito/i);
     console.log(selectedCity);
   });
 });

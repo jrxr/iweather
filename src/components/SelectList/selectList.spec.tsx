@@ -8,16 +8,19 @@ describe("Component: SelectList", () => {
       { id: "2", name: "São Paulo", latitude: 789, longitude: 987 },
     ];
 
+    const onPress = jest.fn();
+
     render(
       <SelectList 
         data={data} 
         onChange={() => {}} 
-        onPress={() => {}} 
+        onPress={onPress} 
       />
     );
 
     const selectedCity = screen.getByText(/Distrito/i);
     fireEvent.press(selectedCity);
 
+    expect(onPress).toBeCalledTimes(1);
   });
 });

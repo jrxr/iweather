@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react-native";
+import { render, screen } from "@testing-library/react-native";
 import { Day } from ".";
 
 import clearDay from "@assets/clear_day.svg";
@@ -6,15 +6,17 @@ import clearDay from "@assets/clear_day.svg";
 describe("Component: Day", () => {
   it("should be render day.", () => {
     render(
-      <Day 
+      <Day
         data={{
-          day: '26/07',
-          min: '30°c',
-          max: '34°c',
+          day: "26/07",
+          min: "30°c",
+          max: "34°c",
           icon: clearDay,
-          weather: 'Céu limpo'
+          weather: "Céu limpo",
         }}
       />
-    )
+    );
+
+    expect(screen.getByText("26/07")).toBeTruthy();
   });
 });

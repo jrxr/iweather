@@ -1,4 +1,5 @@
-import { act, render, screen, waitFor } from "@__tests__/utils/customRender";
+import { act, screen, waitFor } from "@testing-library/react-native"
+import { render } from "@__tests__/utils/customRender"
 import { Routes } from ".";
 import { saveStorageCity } from "@libs/asyncStorage/cityStorage";
 import { api } from "@services/api";

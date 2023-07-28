@@ -1,8 +1,6 @@
 {
   "present": "jest-expo",
-  "globals": {
-    "__DEV__": true
-  },
+  "bail": true,
   "setupFilesAfterEnv": [
     "@testing-library/jest-native/extend-expect"
   ],

@@ -6,7 +6,7 @@ import { api } from "@services/api"
 describe('Screen: Search', () => {
   it('should be show city option', async () => {
     jest.spyOn(api, "get").mockResolvedValue({ data: mockCityAPIResponse })
-
+    
     render(<Search />)
 
     const searchInput = screen.getByTestId('search-input')
